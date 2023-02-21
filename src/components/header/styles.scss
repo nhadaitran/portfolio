@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.header {
+  position: sticky;
+  top: 0;
+  height: $header-height;
+  width: 100%;
+  z-index: 1001;
+  @include GlassBackground;
+  &__group {
+    padding:0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    &__item {
+      margin: auto 5%;
+      color: $text-black;
+      transition: all $s3;
+      &:hover {
+        color: $text-link;
+      }
+    }
+  }
+}

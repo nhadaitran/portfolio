@@ -1,0 +1,8 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.page {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}

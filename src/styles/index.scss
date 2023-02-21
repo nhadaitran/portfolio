@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+body {
+  font-family: $main-font;
+  color: $text-black;
+  min-height: 100vh;
+  min-width: $min-width;
+}

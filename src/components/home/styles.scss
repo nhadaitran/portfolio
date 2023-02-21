@@ -1,0 +1,65 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.home {
+  scroll-snap-align: start;
+  // display: flex;
+  // flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    margin-bottom: $spacing-lg;
+    display: flex;
+    color: $text-black;
+    font-weight: bold;
+    font-size: $h1 * 2;
+    p:first-child {
+      margin-right: $spacing-md;
+      color: $text-link;
+    }
+  }
+  &__subtitle {
+    display: flex;
+    p {
+      margin-right: $spacing-md;
+    }
+    &__border {
+      margin-top: -20px;
+      animation-name: clippath-border;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      background: $text-black;
+    }
+    &__value {
+      background: transparent;
+      animation-name: clippath;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes clippath {
+  0% {
+    clip-path: inset(0 97% 0 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 97% 0 0);
+  }
+}
+
+@keyframes clippath-border {
+  0% {
+    clip-path: inset(0 97% 0 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 97%);
+  }
+  100% {
+    clip-path: inset(0 97% 0 0);
+  }
+}
