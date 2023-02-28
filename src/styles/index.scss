@@ -14,8 +14,12 @@
 }
 
 body {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   font-family: $main-font;
-  color: $text-black;
+  color: $text-white;
   min-height: 100vh;
   min-width: $min-width;
+  background:$bg-black;
 }

@@ -2,8 +2,7 @@
 @import "../../styles/variables";
 
 .header {
-  position: sticky;
-  top: 0;
+  position: fixed;
   height: $header-height;
   width: 100%;
   z-index: 1001;

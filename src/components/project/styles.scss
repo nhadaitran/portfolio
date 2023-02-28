@@ -1,0 +1,54 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.project {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: $header-height;
+  &__title {
+    font-weight: bold;
+    font-size: $h1;
+    margin: $header-height auto 0;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to left, $text-link 70%, transparent 30%) 100%
+      1;
+  }
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70vh;
+    width: 80vw;
+    margin: auto;
+    div {
+      flex: 1 0 25%;
+      transition: all $s3 ease-in-out;
+      display: flex;
+    }
+    &--active {
+      background: white;
+    }
+    &__content {
+      color: $text-link;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      &--open {
+        opacity: 1;
+        transform: translateX(100%);
+        background: red;
+      }
+    }
+    &__image {
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      margin-left: -100%;
+      // background: yellow;
+    }
+    &--deactive {
+      visibility: hidden;
+    }
+  }
+}

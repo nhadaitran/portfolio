@@ -1,13 +1,14 @@
 import React from "react";
-import style from "./styles.scss";
 import Home from "../components/home";
 import About from "../components/about";
+import Project from "../components/project";
 const Page = () => {
   return (
-    <div className="page">
+    <>
       <Home />
       <About />
-    </div>
+      <Project />
+    </>
   );
 };
 

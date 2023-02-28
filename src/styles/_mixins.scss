@@ -28,3 +28,9 @@
   backdrop-filter: blur(3.3px);
   -webkit-backdrop-filter: blur(3.3px);
 }
+
+@mixin BackgroundImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

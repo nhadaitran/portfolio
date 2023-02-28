@@ -1,37 +1,47 @@
 import React from "react";
 import style from "./styles.scss";
+import TypeIt from "typeit-react";
+
 const Home = () => {
-  let arr = ["Developer", "Stuer"];
-  const [index, setIndex] = React.useState(0);
-  console.log(index);
-  const increaseIndex = React.useCallback(() => {
-    if (index === arr.length - 1) {
-      setIndex(0);
-      return;
-    } else {
-      setIndex(index + 1);
-      return;
-    }
-  }, [arr.length, index]);
-  React.useEffect(() => {
-    const IndexInterval = setInterval(() => {
-      increaseIndex();
-    }, 5000);
-    return () => clearInterval(IndexInterval);
-  }, [increaseIndex]);
+  const subtitleRef = React.useRef(null);
 
   return (
     <div className="home">
       <div className="home__title">
-        <p className="">Full</p>
-        <p className="">Name</p>
+        Hi, I'm
+        <p> &nbsp;Dai Nha!</p>
       </div>
       <div className="home__subtitle">
-        <p className="">I'm</p>
-        <div className="home__subtitle__value">
-          {arr[index]}&nbsp;
-          <div className="home__subtitle__border">|</div>
-        </div>
+        <TypeIt
+          options={{
+            speed: 100,
+            lifeLike: true,
+            waitUntilVisible: true,
+            cursor: false,
+          }}
+        >
+          I'm
+        </TypeIt>
+        <span>
+          <TypeIt
+            options={{
+              speed: 100,
+              deleteSpeed: 80,
+              lifeLike: true,
+              waitUntilVisible: true,
+              loop: true,
+            }}
+            getBeforeInit={(instance) => {
+              instance
+                .type(" Web Developer")
+                .pause(500)
+                .delete()
+                .type(" STUer");
+              return instance;
+            }}
+            getAfterInit={(instance) => {}}
+          />
+        </span>
       </div>
     </div>
   );
