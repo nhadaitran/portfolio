@@ -6,13 +6,13 @@ import Home from "./pages/index";
 // import About from "./components/about/index";
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
       </AppLayout>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 
