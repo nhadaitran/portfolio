@@ -6,7 +6,6 @@ const Project = () => {
       <div className="project__title">
         <p className="">Projects</p>
       </div>
-
       <ProjectSection />
     </div>
   );
@@ -44,18 +43,19 @@ const ProjectSection = () => {
         <div className="project__section__image">a</div>
       </div>
       <div className="project__section--deactive"></div>
+      <div className="project__section--deactive"></div>
       <div
         className="project__section--active"
         onMouseOver={() => updateState(2)}
         onMouseLeave={() => updateState(0)}
       >
-        <div className={`${`project__section__content`}${state.b && `--open`}`}>
+        <div
+          className={`${`project__section__content`}${state.b && `--openLeft`}`}
+        >
           a
         </div>
         <div className="project__section__image">a</div>
       </div>
-      <div className="project__section--deactive"></div>
-      <div className="project__section--deactive"></div>
       <div
         className="project__section--active"
         onMouseOver={() => updateState(3)}
@@ -67,7 +67,6 @@ const ProjectSection = () => {
         <div className="project__section__image">a</div>
       </div>
       <div className="project__section--deactive"></div>
-      <div className="project__section--active"></div>
     </div>
   );
 };

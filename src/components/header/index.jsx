@@ -1,21 +1,21 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import style from "./styles.scss";
 const index = () => {
-  
   return (
     <div className="header">
       <ul className="header__group">
         <li className="header__group__item">
-          home
+          <NavLink to="/">Home</NavLink>
         </li>
         <li className="header__group__item">
-          about
+          <NavLink to="/about">About</NavLink>
         </li>
         <li className="header__group__item">
-          projects
+          <NavLink to="/projects">Projects</NavLink>
         </li>
         <li className="header__group__item">
-          contact
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </div>

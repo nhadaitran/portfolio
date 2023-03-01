@@ -6,11 +6,10 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: $header-height;
   &__title {
     font-weight: bold;
     font-size: $h1;
-    margin: $header-height auto 0;
+    margin: 10vh auto 5vh;
     border-bottom: 5px solid;
     border-image: linear-gradient(to left, $text-link 70%, transparent 30%) 100%
       1;
@@ -18,12 +17,13 @@
   &__section {
     display: flex;
     flex-wrap: wrap;
-    min-height: 70vh;
-    width: 80vw;
+    width: 90vw;
     margin: auto;
+    gap: 1%;
     div {
-      flex: 1 0 25%;
-      transition: all $s3 ease-in-out;
+      height: 80vh;
+      flex: 1 0 49%;
+      transition: all $s5 ease-in-out;
       display: flex;
     }
     &--active {
@@ -36,7 +36,12 @@
       opacity: 0;
       &--open {
         opacity: 1;
-        transform: translateX(100%);
+        transform: translateX(102%);
+        background: red;
+      }
+      &--openLeft {
+        opacity: 1;
+        transform: translateX(-102%);
         background: red;
       }
     }

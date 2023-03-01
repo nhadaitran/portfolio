@@ -3,8 +3,6 @@ import style from "./styles.scss";
 import TypeIt from "typeit-react";
 
 const Home = () => {
-  const subtitleRef = React.useRef(null);
-
   return (
     <div className="home">
       <div className="home__title">
@@ -33,7 +31,7 @@ const Home = () => {
             }}
             getBeforeInit={(instance) => {
               instance
-                .type(" Web Developer")
+                .type(" React Developer")
                 .pause(500)
                 .delete()
                 .type(" STUer");
