@@ -1,5 +1,11 @@
 import React from "react";
 import style from "./styles.scss";
+import AookLogo from "../../assets/images/aooklogo.svg";
+import StubdsLogo from "../../assets/images/stubdslogo.svg";
+import ReveologueLogo from "../../assets/images/reveloguelogo.png";
+import AookThumbnail from "../../assets/images/aook.png";
+import StubdsThumbnail from "../../assets/images/stubds.png";
+import ReveologueThumbnail from "../../assets/images/revelogue.png";
 const Project = (props) => {
   return (
     <div className="project" ref={props.prop}>
@@ -32,40 +38,65 @@ const ProjectSection = () => {
   return (
     <div className="project__section">
       <div
-        className="project__section--active"
+        className="project__section__item"
         onMouseOver={() => updateState(1)}
         onMouseLeave={() => updateState(0)}
       >
-        <div className={`${`project__section__content`}${state.a && `--open`}`}>
-          a
+        <div
+          className="project__section__item__thumbnail"
+          style={{ backgroundImage: `url(${AookThumbnail})` }}
+        >
+          <div className="project__section__item__thumbnail__cover"></div>
+          <img src={AookLogo} alt="Aook" className="" />
         </div>
-        <div className="project__section__image">a</div>
+        <div
+          className={`${`project__section__item__meta`} ${
+            state.a ? `project__section__item__meta--open` : ``
+          }`}
+        >
+          content
+        </div>
       </div>
-      <div className="project__section--deactive"></div>
-      <div className="project__section--deactive"></div>
       <div
-        className="project__section--active"
+        className="project__section__item"
         onMouseOver={() => updateState(2)}
         onMouseLeave={() => updateState(0)}
       >
         <div
-          className={`${`project__section__content`}${state.b && `--openLeft`}`}
+          className={`${`project__section__item__metaLeft`} ${
+            state.b ? `project__section__item__metaLeft--open` : ``
+          }`}
         >
-          a
+          content
         </div>
-        <div className="project__section__image">a</div>
+        <div
+          className="project__section__item__thumbnail"
+          style={{ backgroundImage: `url(${StubdsThumbnail})` }}
+        >
+          <div className="project__section__item__thumbnail__cover"></div>
+          <img src={StubdsLogo} alt="Stubds" className="" />
+        </div>
       </div>
       <div
-        className="project__section--active"
+        className="project__section__item"
         onMouseOver={() => updateState(3)}
         onMouseLeave={() => updateState(0)}
       >
-        <div className={`${`project__section__content`}${state.c && `--open`}`}>
-          a
+        <div
+          className="project__section__item__thumbnail"
+          style={{ backgroundImage: `url(${ReveologueThumbnail})` }}
+        >
+          <div className="project__section__item__thumbnail__cover"></div>
+          <img src={ReveologueLogo} alt="Revelogue" className="" />
         </div>
-        <div className="project__section__image">a</div>
+        <div
+          className={`${`project__section__item__meta`} ${
+            state.c ? `project__section__item__meta--open` : ``
+          }`}
+        >
+          content
+        </div>
       </div>
-      <div className="project__section--deactive"></div>
     </div>
   );
 };

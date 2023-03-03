@@ -17,44 +17,82 @@
   }
   &__section {
     display: flex;
-    flex-wrap: wrap;
-    width: 90vw;
+    flex-direction: column;
+    width: 100%;
     margin: auto;
+    padding: 0 $h1;
     gap: 1%;
-    div {
-      height: $min-width*1.3;
-      flex: 1 0 49%;
-      transition: all $s5 ease-in-out;
+    height: 80vh;
+    position: relative;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    &__item {
+      scroll-snap-align: center;
       display: flex;
-    }
-    &--active {
-      background: white;
-    }
-    &__content {
-      color: $text-link;
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      &--open {
-        opacity: 1;
-        transform: translateX(102%);
-        background: red;
+      justify-content: space-between;
+      font-size: $h3;
+      &__meta {
+        transition: all $s5 ease-in-out;
+        width: 49%;
+        opacity: 0;
+        transform: translateX(-100%);
+        &--open {
+          opacity: 1;
+          transform: translateX(0);
+          background: red;
+        }
       }
-      &--openLeft {
-        opacity: 1;
-        transform: translateX(-102%);
-        background: yellow;
+      &__metaLeft {
+        width: 49%;
+        transition: all $s5 ease-in-out;
+        opacity: 0;
+        transform: translateX(100%);
+        &--open {
+          opacity: 1;
+          transform: translateX(0);
+          background: red;
+        }
       }
-    }
-    &__image {
-      z-index: 1;
-      height: 100%;
-      width: 100%;
-      margin-left: -100%;
-      // background: yellow;
-    }
-    &--deactive {
-      visibility: hidden;
+      &__thumbnail {
+        width: 49%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        @include BackgroundImage;
+        &__cover {
+          position: absolute;
+          background: $text-black;
+          opacity: 0.5;
+          height: 100%;
+          width: 100%;
+        }
+        img {
+          filter: none;
+          opacity: 1;
+          position: relative;
+          transition: all 2s ease-in-out;
+          scale: calc(0.5);
+        }
+        &:hover {
+          img {
+            scale: calc(1);
+            opacity: 0.5;
+          }
+        }
+        &:nth-child(2) {
+          img {
+            scale: calc(0.3);
+          }
+          &:hover {
+            img {
+              scale: calc(0.6);
+              opacity: 0.5;
+            }
+          }
+        }
+      }
     }
   }
 }
