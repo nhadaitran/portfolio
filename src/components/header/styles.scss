@@ -6,18 +6,39 @@
   height: $header-height;
   width: 100%;
   z-index: 1001;
-  @include GlassBackground;
+  transition: all $s5 ease-in-out;
+  &--scrolled {
+    background: $text-white;
+  }
   &__group {
-    padding:0;
+    padding: 0;
     height: 100%;
     display: flex;
     justify-content: center;
     list-style: none;
     &__item {
       margin: auto 5%;
-      color: $text-black;
-      transition: all $s3;
-      &:hover {
+      a {
+        font-weight: bold;
+        font-size: $h4;
+        text-decoration: none;
+        color: $text-white;
+        transition: all $s5;
+        &:hover {
+          color: $text-link;
+        }
+      }
+      &__link {
+        &--active {
+          color: $text-link;
+        }
+      }
+      &--scrolled {
+        a {
+          color: $text-black;
+        }
+      }
+      &--active {
         color: $text-link;
       }
     }

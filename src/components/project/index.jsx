@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./styles.scss";
-const Project = () => {
+const Project = (props) => {
   return (
-    <div className="project">
+    <div className="project" ref={props.prop}>
       <div className="project__title">
         <p className="">Projects</p>
       </div>
@@ -19,7 +19,6 @@ const ProjectSection = () => {
   });
 
   const updateState = React.useCallback((data) => {
-    // alert(data===1)
     data === 1
       ? setState((state) => ({ ...state, ...{ a: true } }))
       : setState((state) => ({ ...state, ...{ a: false } }));

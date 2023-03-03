@@ -3,7 +3,7 @@
 $main-font: "Montserrat", sans-serif;
 
 $bg-white: rgba(255, 255, 255);
-$bg-black: rgba(0, 0, 0,0.9);
+$bg-black: rgba(0, 0, 0, 1);
 $bg-inherit: rgba(38, 38, 38);
 
 $button: #25354c;
@@ -19,29 +19,28 @@ $inherit: rgba(0, 0, 0, 0.5);
 $secondary: rgba(229, 234, 239);
 $muted: rgba(220, 220, 220);
 
-$spacing-sm: 8px;
-$spacing-md: 16px;
-$spacing-lg: 32px;
-$spacing-xl: 64px;
+$spacing-sm: 0.5vw;
+$spacing-md: 1vw;
+$spacing-lg: 2vw;
+$spacing-xl: 4vw;
 
 $fs-md: 16px;
 $fs-lg: 20px;
 
-$h1: 2em;
-$h2: 1.5em;
-$h3: 1.17em;
-$h4: 1em;
-$h5: 0.83em;
-$h6: 0.67em;
+$h1: 2vw;
+$h2: 1.5vw;
+$h3: 1.17vw;
+$h4: 1vw;
+$h5: 0.83vw;
+$h6: 0.67vw;
 
 $s3: 0.3s;
 $s5: 0.5s;
 $s7: 0.7s;
 $s1: 1s;
 
-
-$header-height: 60px;
-$min-width:414px;
+$header-height: 8vh;
+$min-width: 414px;
 
 $sm: 36em;
 $md: 48em;

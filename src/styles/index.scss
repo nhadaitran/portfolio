@@ -1,6 +1,5 @@
 @import "variables";
 @import "mixins";
-
 *,
 *::before,
 *::after {
@@ -18,7 +17,11 @@ body {
   color: $text-white;
   min-height: 100vh;
   min-width: $min-width;
-  background: $bg-black;
+  background: url(../assets/images/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   position: relative;
   overflow-y: auto;
   scroll-behavior: smooth;

@@ -6,9 +6,9 @@ import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MailIcon from "@mui/icons-material/MailOutline";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWorkOutlined";
 import CV from "../../assets/files/cv.pdf";
-const About = () => {
+const About = (props) => {
   return (
-    <div className="about">
+    <div className="about" ref={props.prop}>
       <div className="about__title">
         <p className="">About</p>
       </div>
@@ -29,8 +29,8 @@ const AboutContent = () => {
   return (
     <div className="about__section__content">
       <span className="about__section__content__title">
-        This is a story about&nbsp;
-        <b>me</b>
+        There is some <b>fact</b> about me
+        
       </span>
       <span className="about__section__content__subtitle">
         So, My name is Tran Dai&nbsp;

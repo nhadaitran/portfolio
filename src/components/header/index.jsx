@@ -1,20 +1,54 @@
-import React from "react";
+import * as React from "react";
 import { NavLink } from "react-router-dom";
 import style from "./styles.scss";
-const index = () => {
+const Header = (props) => {
+  const [scroll, setScroll] = React.useState(false);
+  const handleScroll = React.useCallback((data) => {
+    setScroll(data);
+  }, []);
+  React.useEffect(() => {
+    const toggleVisible = () => {
+      const scrolled = document.documentElement.scrollTop;
+      scrolled > 100 ? handleScroll(true) : handleScroll(false);
+    };
+    window.addEventListener("scroll", toggleVisible);
+  }, [handleScroll, scroll]);
+
   return (
-    <div className="header">
+    <div className={`${`header`} ${scroll ? `header--scrolled` : ``}`}>
       <ul className="header__group">
-        <li className="header__group__item">
-          <NavLink to="/">Home</NavLink>
+        <li
+          className={`${`header__group__item`} ${
+            scroll ? `header__group__item--scrolled` : ``
+          }`}
+        >
+          <NavLink to="/" onMouseDown={() => props.handleScroll(0)}>
+            Home
+          </NavLink>
         </li>
-        <li className="header__group__item">
-          <NavLink to="/about">About</NavLink>
+        <li
+          className={`${`header__group__item`} ${
+            scroll ? `header__group__item--scrolled` : ``
+          }`}
+        >
+          <NavLink to="/about" onMouseDown={() => props.handleScroll(1)}>
+            About
+          </NavLink>
         </li>
-        <li className="header__group__item">
-          <NavLink to="/projects">Projects</NavLink>
+        <li
+          className={`${`header__group__item`} ${
+            scroll ? `header__group__item--scrolled` : ``
+          }`}
+        >
+          <NavLink to="/projects" onMouseDown={() => props.handleScroll(2)}>
+            Projects
+          </NavLink>
         </li>
-        <li className="header__group__item">
+        <li
+          className={`${`header__group__item`} ${
+            scroll ? `header__group__item--scrolled` : ``
+          }`}
+        >
           <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
@@ -22,4 +56,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Header;
