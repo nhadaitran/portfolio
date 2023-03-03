@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.6436efcd.css",
-    "main.js": "/portfolio/static/js/main.34532c85.js",
+    "main.css": "/portfolio/static/css/main.cb1ac627.css",
+    "main.js": "/portfolio/static/js/main.350d2efe.js",
+    "static/media/stubds.png": "/portfolio/static/media/stubds.b59af679204d6ebb49e1.png",
+    "static/media/reveloguelogo.png": "/portfolio/static/media/reveloguelogo.3d4d2c2b7b248fbd9179.png",
+    "static/media/revelogue.png": "/portfolio/static/media/revelogue.32d219902fae75fcf54b.png",
+    "static/media/aook.png": "/portfolio/static/media/aook.28231ed25fe6b5414b92.png",
     "static/media/home.jpg": "/portfolio/static/media/home.bff5546e5755bf0c3aab.jpg",
     "static/media/cv.pdf": "/portfolio/static/media/cv.91c830f6eb07191adb8b.pdf",
+    "static/media/stubdslogo.svg": "/portfolio/static/media/stubdslogo.21a3fe8af7e062659122d89b112a65a1.svg",
+    "static/media/aooklogo.svg": "/portfolio/static/media/aooklogo.30c3a506bf8126175db39bbf95c22538.svg",
     "index.html": "/portfolio/index.html",
-    "main.6436efcd.css.map": "/portfolio/static/css/main.6436efcd.css.map",
-    "main.34532c85.js.map": "/portfolio/static/js/main.34532c85.js.map"
+    "main.cb1ac627.css.map": "/portfolio/static/css/main.cb1ac627.css.map",
+    "main.350d2efe.js.map": "/portfolio/static/js/main.350d2efe.js.map"
   },
   "entrypoints": [
-    "static/css/main.6436efcd.css",
-    "static/js/main.34532c85.js"
+    "static/css/main.cb1ac627.css",
+    "static/js/main.350d2efe.js"
   ]
 }
