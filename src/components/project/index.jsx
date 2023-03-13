@@ -12,7 +12,7 @@ const Project = (props) => {
       <div className="project__title">
         <p className="">Projects</p>
       </div>
-      <ProjectSection />
+      {/* <ProjectSection /> */}
     </div>
   );
 };
